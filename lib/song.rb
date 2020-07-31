@@ -31,6 +31,11 @@ class Song
     end
   end
 
+  def genre_names=(genre_names)
+    genre_names.each do |genre_name|
+    end
+  end 
+
   def save
     sql = "INSERT INTO #{table_name_for_insert} (#{col_names_for_insert}) VALUES (#{values_for_insert})"
     DB[:conn].execute(sql)
@@ -59,6 +64,3 @@ class Song
   end
 
 end
-
-
-
